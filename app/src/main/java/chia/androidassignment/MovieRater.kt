@@ -3,6 +3,7 @@ package chia.androidassignment
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.*
 
 
 class MovieRater : AppCompatActivity() {
@@ -14,6 +15,11 @@ class MovieRater : AppCompatActivity() {
 
 
 
+    }
+    fun btnClick(v: View){
+        val duration = Toast.LENGTH_SHORT
+        val toast = Toast.makeText(applicationContext, "STRING MESSAGE", duration)
+        toast.show()
     }
 
 
