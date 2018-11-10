@@ -17,8 +17,10 @@ class MovieRater : AppCompatActivity() {
 
     }
     fun btnClick(v: View){
+        var theText = "title = Venom\nMovieRating=5"
+
         val duration = Toast.LENGTH_SHORT
-        val toast = Toast.makeText(applicationContext, "STRING MESSAGE", duration)
+        val toast = Toast.makeText(applicationContext, theText, duration)
         toast.show()
     }
 
