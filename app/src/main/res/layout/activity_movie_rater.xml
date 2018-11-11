@@ -17,7 +17,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-            android:id="@+id/editText"
+            android:id="@+id/movTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -31,7 +31,7 @@
             android:text="Description" />
 
     <EditText
-            android:id="@+id/editText3"
+            android:id="@+id/movDesc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -49,33 +49,31 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-        <RadioButton
-                android:id="@+id/radioButton4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+        <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="English" />
-
-        <RadioButton
-                android:id="@+id/radioButton3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Chinese" />
-
-        <RadioButton
-                android:id="@+id/radioButton5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Malay" />
-
-        <RadioButton
-                android:id="@+id/radioButton6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Tamil" />
+                android:id="@+id/radioGroup"
+                android:orientation="horizontal"
+        >
+            <RadioButton
+                    android:text="English"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/English" android:layout_weight="1"
+                    android:checked="true"/>
+            <RadioButton
+                    android:text="Chinese"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/Chinese" android:layout_weight="1"/>
+            <RadioButton
+                    android:text="Malay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/Malay" android:layout_weight="1"/>
+            <RadioButton
+                    android:text="Tamil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/Tamil" android:layout_weight="1"/>
+        </RadioGroup>
     </LinearLayout>
 
     <TextView
@@ -85,7 +83,7 @@
             android:text="Release date" />
 
     <EditText
-            android:id="@+id/editText4"
+            android:id="@+id/date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -93,29 +91,32 @@
             android:hint="Enter release date"/>
 
     <CheckBox
-            android:id="@+id/checkBox4"
+            android:id="@+id/notSuit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Not suitable for all audience" />
+            android:text="Not suitable for all audience"
+            android:clickable="true"
+            android:onClick="onCheckboxClicked"
+    />
 
     <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="85dp"
-            android:orientation="horizontal">
+            android:id="@+id/suit" android:visibility="invisible">
 
         <CheckBox
-                android:id="@+id/checkBox5"
+                android:id="@+id/viol"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Violence" />
+                android:text="Violence"/>
 
         <CheckBox
-                android:id="@+id/checkBox6"
+                android:id="@+id/langc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Language used" />
+                android:text="Language used"/>
     </LinearLayout>
 
     <Button
