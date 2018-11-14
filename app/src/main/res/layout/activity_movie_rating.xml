@@ -15,14 +15,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" android:id="@+id/textView4"/>
     <RatingBar
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/ratingBar"
             android:numStars="5"
-            android:isIndicator="true"
+            android:isIndicator="false"
     />
     <TextView
             android:text="Share your view on the show"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:id="@+id/textView5"/>
+            android:layout_height="wrap_content"
+            android:id="@+id/textView5"/>
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/editText"/>
+
 </LinearLayout>
